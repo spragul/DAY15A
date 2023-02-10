@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script>
+
+    <style>
+        .continer {
+            background-color: rgb(228, 184, 191);
+        }
+
+        .fullback {
+            background-color: rgb(228, 184, 191);
+            display: flex;
+            justify-content: center;
+        }
+
+        .box {
+            color: green;
+        }
+
+        tr,
+        td {
+            border: 2px solid red;
+            margin: 15px;
+            padding: 10px;
+        }
+
+        th {
+            border: 2px solid rgb(0, 0, 0);
+            margin: 15px;
+            padding: 10px;
+
+        }
+
+        table {
+            background-color: rgb(198, 231, 220);
+        }
+
+        .s {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="continer">
+        <div class="fullback">
+            <form id="form" action="" method="get">
+                <div class="box">
+                    <label for="firstName">First name<span class="s">*</span></label>
+                    <input type="text" id="firstName" name="firstName" placeholder="First name" required><br>
+                </div>
+                <div class="box">
+                    <label for="lastName">Last name<span class="s">*</span></label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required><br>
+                </div>
+                <div class="box">
+                    <address>
+                        <label for="">Address<span class="s">*</span></label>
+                        <input type="text" name="address" id="address" placeholder="Address" required>
+                    </address>
+                </div>
+
+                <div class="box">
+                    <label for="pincode">Pincode<span class="s">*</span></label>
+                    <input type="number" name="" id="pincode" name="pincode" placeholder="pincode" minlength="1"
+                        maxlength="6" required><br>
+                </div>
+                <div class="box">
+                    <label for="gender">Gender<span class="s">*</span></label>
+                    <input type="text" id="gender" name="gender" placeholder="gender" required><br>
+                </div>
+                <div class="box">
+                    <label for="food">Food<span class="s">*</span></label>
+                    <select name="food[]" id="food" multiple class="selectpicker" required><br>
+                        <option value="Dosa">Dosa </option>
+                        <option value="Idli">Idli</option>
+                        <option value="Appam">Appam</option>
+                        <option value="Upma">Upma</option>
+                        <option value="Pongal">Pongal</option>
+                        <option value="Samber">Samber</option>
+                        <option value="Pulihora">Pongal</option>
+                        <option value="Medu vada">Medu vada</option>
+                        <option value="coconut rice">coconut rice</option>
+                    </select><br>
+                </div>
+                <div class="box">
+                    <label for="State">State<span class="s">*</span></label>
+                    <input type="text" id="State" name="State" placeholder="State" required> <br>
+                </div>
+
+                <div class="box">
+                    <label for="Country">Country<span class="s">*</span></label>
+                    <input type="text" id="Country" name="Country" placeholder="Country" required> <br>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="user-data">
+            <table>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Address</th>
+                    <th>Pincode</th>
+                    <th>Gender</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Food</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
